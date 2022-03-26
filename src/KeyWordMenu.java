@@ -20,12 +20,4 @@ public class KeyWordMenu {
         sc.close();
         return keyWordAnswer;
     }
-
-    public int getkeyWordAnswer() {
-        return keyWordAnswer;
-    }
-
-    public void setkeyWordAnswer(int keyWordAnswer) {
-        this.keyWordAnswer = keyWordAnswer;
-    }
 }

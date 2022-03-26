@@ -3,13 +3,19 @@ public class Game {
     private String genre;
     private boolean multiplayer;
     private int vision;
-    private String overEighteen;
+    private boolean overEighteen;
     private String releaseYear;
     private String developer;
     private Float price;
     
     public Float getPrice() {
         return price;
+    }
+    public boolean isOverEighteen() {
+        return overEighteen;
+    }
+    public void setOverEighteen(boolean overEighteen) {
+        this.overEighteen = overEighteen;
     }
     public String getName() {
         return name;
@@ -34,12 +40,6 @@ public class Game {
     }
     public void setVision(int vision) {
         this.vision = vision;
-    }
-    public String getOverEighteen() {
-        return overEighteen;
-    }
-    public void setOverEighteen(String overEighteen) {
-        this.overEighteen = overEighteen;
     }
     public String getReleaseYear() {
         return releaseYear;
