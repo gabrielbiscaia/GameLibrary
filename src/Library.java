@@ -2,11 +2,36 @@ import java.util.Scanner;
 
 public class Library {
     private Game[][] game = new Game[20][8];
+    private Menu m;
     private String aux;
     private int i;
     private int numberOfGames = 0, gameDeleted, gameNumber;
     Scanner sc = new Scanner(System.in);
 
+    public void callFunction(int answer){
+        switch (answer){
+            case 1:
+                addGame();
+                break;
+            case 2:
+                removeGame();
+                break;
+            case 3:
+                consultGames();
+                break;
+            case 4:
+                listingGames();
+                break;
+            case 5:
+                changePrice();
+                break;
+            case 6:
+                m.callMenu();
+                break;
+            default:
+                System.out.println("Invalid command.");
+        }
+    }
     public void addGame(){
         numberOfGames += 1;
         gameNumber = numberOfGames;
