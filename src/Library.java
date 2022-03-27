@@ -1,42 +1,44 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Library {
-    private ArrayList<Game> game = new ArrayList<Game>();
+    private Game[][] game = new Game[20][8];
     private String aux;
+    private int gameNumber = 0;
     Scanner sc = new Scanner(System.in);
 
     public void addGame(){
+        gameNumber = gameNumber++;
         System.out.println("---New Game---");
         System.out.println("Game's name: ");
-        game.setName(sc.nextLine());
+        game[gameNumber][0].setName(sc.nextLine());
         System.out.println("Game's genre: ");
-        game.setGenre(sc.nextLine());
+        game[gameNumber][1].setGenre(sc.nextLine());
         System.out.println("This game is multiplayer [yes/no]: ");
         aux = sc.nextLine();
         if(aux == "yes"){
-            game.setMultiplayer(true);
+            game[gameNumber][2].setMultiplayer(true);
         }else if(aux == "no"){
-            game.setMultiplayer(false);
+            game[gameNumber][2].setMultiplayer(false);
         }else{
             System.out.println("There is a problem to set multiplayer");
         }
         System.out.println("Game's vision [1/3]: ");
-        game.setVision(sc.nextInt());
+        game[gameNumber][3].setVision(sc.nextInt());
         System.out.println("This game is +18 years old [yes/no]: ");
         if(aux == "yes"){
-            game.setOverEighteen(true);
+            game[gameNumber][4].setOverEighteen(true);
         }else if(aux == "no"){
-            game.setOverEighteen(false);
+            game[gameNumber][4].setOverEighteen(false);
         }else{
             System.out.println("There is a problem to set +18");
         }
         System.out.println("Game's release: ");
-        game.setReleaseYear(sc.nextInt());
+        game[gameNumber][5].setReleaseYear(sc.nextLine());
         System.out.println("Game's developer: ");
-        game.setDeveloper(sc.nextLine());
+        game[gameNumber][6].setDeveloper(sc.nextLine());
         System.out.println("Game's price: ");
-        game.setPrice(sc.nextFloat());
+        game[gameNumber][7].setPrice(sc.nextFloat());
+        sc.close();
     }
     public void removeGame(){
 
